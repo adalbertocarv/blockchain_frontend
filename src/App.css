@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+/* Estilos gerais */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f0f;
+  color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Background com gradiente suave verde */
+.background {
+  background: linear-gradient(135deg, rgba(18,32,16,1) 0%, rgba(10,122,64,0.75) 50%, rgba(18,32,16,1) 100%);
   min-height: 100vh;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: linear-gradient(to right, rgba(18,32,16,0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(18,32,16,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Título principal com fonte maior e espaçada */
+.main-title {
+  color: #e1e1e1;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 3rem; /* Aumentando o tamanho da fonte */
+  margin-bottom: 40px;
+}
+
+/* Input de arquivo estilizado */
+.file-input {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.1rem; /* Aumentando o tamanho da fonte */
+}
+
+/* Estilo para os botões */
+.custom-button {
+  background-color: #0a8754;
   color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  font-size: 1rem; /* Aumentando o tamanho da fonte */
 }
 
-.App-link {
-  color: #61dafb;
+.custom-button:hover {
+  background-color: #097f4a;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsividade */
+@media (max-width: 768px) {
+  .background {
+      padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .main-title {
+      font-size: 2.2rem;
+  }
+  .custom-button {
+      width: 100%;
   }
 }
